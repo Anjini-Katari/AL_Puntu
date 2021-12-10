@@ -1,0 +1,7 @@
+Puntu (Anjini Katari and jacc Chen)
+Lab 02
+
+
+12.10.21 Notes
+ * assume array is remians sorted (throughout initialization)
+ * Have to 'type' array list
