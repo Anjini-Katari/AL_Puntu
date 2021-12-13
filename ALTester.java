@@ -1,4 +1,6 @@
-public class ALTester {
+
+
+public class ALTester implements OrderedArrayList {
 
 private int[] _data;
 private int _size;
@@ -61,5 +63,37 @@ public boolean add(int newVal) {
   add(_size, newVal);
   return true;
 } // add
+
+//removes the item at index
+  //shifts elements left to fill in newly-empted slot
+public int remove( int index ) {
+  int[] capybara = new int[_size - 1];
+  for (int i = 0; i < index; i++) {
+    capybara[i] = _data[i];
+  }
+  for (int h = index + 1; h <= _size - 1; h++) {
+    capybara[h - 1] = _data[h];
+  }
+  _data = capybara;
+  _size -= 1;
+  return _size;
+} // remove
+
+public int findmax() {
+  int currentmax = 0;
+  int indexmax = 0;
+  for (int i = 0; i < _data.length - 1; i++) {
+    if (_data[i] <= _data[i + 1]) {
+      currentmax = _data[i + 1];
+      indexmax = i + 1;
+    }
+  }
+  return indexmax; 
+}
+
+
+public static void main(String[] args) {
+
+} // main
 
 } // ALTester
