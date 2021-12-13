@@ -1,4 +1,8 @@
-
+/***
+TNPG: Puntu (Anjini Katari, Jacc Chen)
+APCS-- pd07
+12-12-21
+***/
 
 public class ALTester implements OrderedArrayList {
 
