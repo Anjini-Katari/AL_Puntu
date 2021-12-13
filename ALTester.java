@@ -59,7 +59,7 @@ public boolean add (int index, int newVal) {
 
 } // add
 
-public boolean add(int newVal) {
+public boolean add (int newVal) {
   add(_size, newVal);
   return true;
 } // add
@@ -79,20 +79,59 @@ public int remove( int index ) {
   return _size;
 } // remove
 
-public int findmax() {
-  int currentmax = 0;
-  int indexmax = 0;
+public int findmin() {
+  int currentmin = 0;
+  int indexmin = 0;
   for (int i = 0; i < _data.length - 1; i++) {
-    if (_data[i] <= _data[i + 1]) {
-      currentmax = _data[i + 1];
-      indexmax = i + 1;
+    if (_data[i] < _data[i + 1]) {
+      currentmin = _data[i];
+      indexmin = i;
+    }
+    else {
+      currentmin = _data[i + 1];
+      indexmin = i + 1;
     }
   }
-  return indexmax; 
-}
+  System.out.println(indexmin);
+  System.out.println(currentmin);
+  return indexmin;
+} // findmin
 
+public boolean sortcheck() {
+  for (int i = 0; i < _data.length; i++) {
+    if (_data[i] > _data[i + 1]) {
+      break;
+    }
+    return false;
+  }
+  return true;
+} // sortcheck
+
+public boolean sort() {
+  int[] rodent = new int[_data.length];
+  for (int i = 0; i < _data.length; i++) {
+    remove(findmin());
+    rodent[i] = (_data[findmin()]);
+  }
+  _data = rodent;
+  return true;
+} // sort
 
 public static void main(String[] args) {
+  OrderedArrayList meepo = new ALTester();
+  System.out.println("Printing empty SuperArray meepo...");
+  System.out.println(meepo);
+  meepo.add(5);
+  meepo.add(4);
+  meepo.add(3);
+  meepo.add(2);
+  meepo.add(1);
+  System.out.println("Printing populated SuperArray meepo...");
+  System.out.println(meepo);
+  meepo.sort();
+  System.out.println("Printing sorted SuperArray meepo...");
+  System.out.println(meepo);
+
 
 } // main
 
