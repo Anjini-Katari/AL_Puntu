@@ -26,35 +26,17 @@ public class OrderedArrayList
   {
     _data = new ArrayList<Integer>();
   }
-/*
+
   public String toString(){
-    String foo = "[";
-    for( int i = 0; i < _data.size(); i++ ) {
-      foo += _data[i] + ",";
-    }
-    if ( foo.length() > 1 )
-      //shave off trailing comma
-      foo = foo.substring( 0, foo.length()-1 );
-    foo += "]";
-    return foo;
+    return _data.toString();
 
   } // override toString
- */
-/*
-  public Integer remove( int i ){
-    int[] capybara = new int[_size - 1];
-    for (int i = 0; i < index; i++) {
-      capybara[i] = _data[i];
-    }
-    for (int h = index + 1; h <= _size - 1; h++) {
-      capybara[h - 1] = _data[h];
-    }
-    _data = capybara;
-    _size -= 1;
-    return _size;
-  } // remove
+
+
+  public Integer remove( int i ) {
+  	return _data.remove(i);
   }
-*/
+ 
   public int size(){
     return _data.size();
   }
@@ -99,6 +81,7 @@ public class OrderedArrayList
     for( int i = 0; i < 15; i++ )
       Franz.addLinear( (int)( 50 * Math.random() ) );
     System.out.println( Franz );
+
     /*-----v-------move-me-down-----------------v--------
     // testing binary search
     Franz = new OrderedArrayList();
