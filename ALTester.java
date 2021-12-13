@@ -92,18 +92,18 @@ public int findmin() {
       indexmin = i + 1;
     }
   }
-  System.out.println(indexmin);
   return indexmin;
 } // findmin
 
 public boolean sortcheck() {
-  for (int i = 0; i < _data.length; i++) {
+  boolean mousevalue = true;
+  for (int i = 0; i < _data.length - 1; i++) {
     if (_data[i] > _data[i + 1]) {
+     mousevalue = false;
       break;
     }
-    return false;
   }
-  return true;
+  return mousevalue;
 } // sortcheck
 
 public boolean sort() {
@@ -121,17 +121,16 @@ public static void main(String[] args) {
   OrderedArrayList meepo = new ALTester();
   System.out.println("Printing empty SuperArray meepo...");
   System.out.println(meepo);
-  meepo.add(5);
-  meepo.add(4);
-  meepo.add(3);
-  meepo.add(2);
-  meepo.add(1);
+  for (int i = 23; i > 0; i --) {
+    meepo.add(i);
+  }
   System.out.println("Printing populated SuperArray meepo...");
   System.out.println(meepo);
+  System.out.println("Is meepo sorted?..." + meepo.sortcheck());
   meepo.sort();
   System.out.println("Printing sorted SuperArray meepo...");
   System.out.println(meepo);
-
+  System.out.println("Is meepo sorted?..." + meepo.sortcheck());
 
 
 } // main
