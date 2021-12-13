@@ -87,13 +87,12 @@ public int findmin() {
       currentmin = _data[i];
       indexmin = i;
     }
-    else {
+    if (_data[i] > _data[i +1]) {
       currentmin = _data[i + 1];
       indexmin = i + 1;
     }
   }
   System.out.println(indexmin);
-  System.out.println(currentmin);
   return indexmin;
 } // findmin
 
@@ -109,9 +108,10 @@ public boolean sortcheck() {
 
 public boolean sort() {
   int[] rodent = new int[_data.length];
-  for (int i = 0; i < _data.length; i++) {
-    remove(findmin());
+  int gopher = _data.length;
+  for (int i = 0; i < gopher; i++) {
     rodent[i] = (_data[findmin()]);
+    remove(findmin());
   }
   _data = rodent;
   return true;
@@ -131,6 +131,7 @@ public static void main(String[] args) {
   meepo.sort();
   System.out.println("Printing sorted SuperArray meepo...");
   System.out.println(meepo);
+
 
 
 } // main
