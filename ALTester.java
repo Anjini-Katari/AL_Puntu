@@ -121,6 +121,20 @@ public boolean sort() {
   return true;
 } // sort
 
+public boolean addNum(int newVal){
+  for (int i = 0; i < _size - 1; i ++) {
+  	System.out.println(_size);
+  	if (newVal >= _data[i]) {
+  	  	System.out.println(_data[i]);
+  	  	System.out.println(_data[i + 1]);
+  		if (newVal <= _data[i + 1]){
+  			add(i + 1, newVal);
+  		}
+  	}
+  }
+  return true;
+}
+
 public static void main(String[] args) {
   OrderedArrayList meepo = new ALTester();
   System.out.println("Printing empty SuperArray meepo...");
@@ -135,6 +149,8 @@ public static void main(String[] args) {
   System.out.println("Printing sorted SuperArray meepo...");
   System.out.println(meepo);
   System.out.println("Is meepo sorted?..." + meepo.sortcheck());
+  meepo.addNum(10);
+  System.out.println("added to meepo" + meepo);
 
 
 } // main
