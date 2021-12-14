@@ -1,7 +1,34 @@
 Puntu (Anjini Katari and jacc Chen)
-Lab 02
+APCS
+Lab02 -- Well Al B. Sorted
+2021-12-13 
+
+DISCO:
+ * Always double check the closet for skeletons 
+ * Can't use index notation when trying to access a specific index
+   in a Integer array 
+ * We've said this before, but writing print statements makes 
+   debugging so so much easier (aids in tracing/visualization)
+
+QCC: 
+ * Why aren't the true/false statements working? Even after conferring 
+   with other Thinkers, no solution was found :(
+ * Next time make a note of all the methods given to us by the import
+ * Clarify the points in your plan if there's any confusion
+    * This may help avoid the situation we got ourselves in 
+ * Unfortunely did not have time/was able to create a binary search 
+   method -> is that easier or harder to code than a linear search
+   * is one more effective than the other in this case? 
+   * can they be used interchangably?
 
 
 12.10.21 Notes
  * assume array is remians sorted (throughout initialization)
  * Have to 'type' array list
+
+12.13.21 Notes
+ * Realized that the structure we were following for the code 
+   did not follow the directives so all the code was rewritten 
+ * ALTester should only have the true/false scenarios 
+ * OrderedArrayList is where all of the methods pretaining to 
+   the array lie
