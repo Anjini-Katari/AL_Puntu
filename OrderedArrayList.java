@@ -50,15 +50,22 @@ public class OrderedArrayList
   // maintains ascending order of elements
   // uses a linear search to find appropriate index
   public boolean addLinear(Integer newVal){
-	for (int i = 0; i < size(); i ++) {
-		if (newVal.compareTo(_data.get(i)) < 0) {
-			_data.add(i, newVal);
-			return true;
-		}
-		else {
-			_data.add(newVal);
-		}
-	}
+    System.out.println(_data.toString());
+    System.out.println(size());
+
+    System.out.println("newVal: " + newVal);
+    if (size() == 0) {
+      _data.add(0, newVal);
+    }
+    else {
+      for (int i = 0; i < size(); i ++) {
+        if (newVal.compareTo(_data.get(i)) < 0) {
+          _data.add(i, newVal);
+          return true;
+        }
+      }
+      _data.add(size(), newVal);
+	  }
 	return true;
   }
 /*
@@ -70,6 +77,8 @@ public class OrderedArrayList
 
   }	
   */
+  /*-----v-------move-me-down-----------------v--------
+
   // main method solely for testing purposes
   public static void main( String[] args )
   {
@@ -82,7 +91,6 @@ public class OrderedArrayList
       Franz.addLinear( (int)( 50 * Math.random() ) );
     System.out.println( Franz );
 
-    /*-----v-------move-me-down-----------------v--------
     // testing binary search
     Franz = new OrderedArrayList();
     for( int i = 0; i < 15; i++ ) 
@@ -91,6 +99,5 @@ public class OrderedArrayList
       =====^====================================^=========*/
 
   }//end main()
-
-}//end class OrderedArrayList
+//end class OrderedArrayList
 
