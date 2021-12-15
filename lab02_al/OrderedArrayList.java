@@ -129,6 +129,8 @@ public class OrderedArrayList
 
     OrderedArrayList franz = new OrderedArrayList();
 
+    System.out.println( franz ); 
+
     // testing linear search
     for( int i = 0; i < 15; i++ )
       franz.addLinear( (int)( 50 * Math.random() ) );
